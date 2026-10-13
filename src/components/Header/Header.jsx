@@ -1,5 +1,5 @@
 import "./Header.css"
-import logo from "../assets/react-core-concepts.png";
+import logo from "../../assets/react-core-concepts.png";
 
 const reactDescription = ["Fundamental", "Core", "Crucial", "Trending", "Best"]
 

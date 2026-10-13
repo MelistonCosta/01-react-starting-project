@@ -1,8 +1,9 @@
 import { CORE_CONCEPTS } from "./data.js";
-import Header from "./components/Header.jsx";
-import { User } from "./components/User.jsx";
-import { CardsComponent } from "./components/CardsComponent.jsx";
-
+import Header from "./components/Header/Header.jsx";
+import { User } from "./components/User/User.jsx";
+import { CardsComponent } from "./components/CardComponent/CardsComponent.jsx";
+import TabButton from "./components/TabButton/TabButton.jsx";
+import TestCards from "./components/TestCards/TestCards.jsx";
 
 function App() {
   return (
@@ -29,6 +30,26 @@ function App() {
               image= {CORE_CONCEPTS[2].image}
             />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Tab Buttons</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+          </menu>
+        </section>
+        <section id="examples">
+          <h2>Cards Exercise: Available Experts</h2>
+          <TestCards name="Anthony Blake">
+            <p>Blake is a professor of Computer Science at the University of Illinois.</p>
+            <p><a href="mailto:blake@example.com">Email Anthony</a></p>
+          </TestCards>
+          <TestCards name="Maria Miles">
+            <p>Maria is a professor of Computer Science at the University of Illinois.</p>
+            <p><a href="mailto:blake@example.com">Email Maria</a></p>
+          </TestCards>
         </section>
       </main>
     </div>

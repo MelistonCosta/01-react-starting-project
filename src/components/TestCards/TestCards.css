@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Lato:wght@400;700&display=swap');
 
 .card {
     font-family: 'Raleway', sans-serif;
@@ -30,4 +30,19 @@
     text-decoration: none;
     font-weight: bold;
     border-bottom: 1px solid;
+}
+
+.button {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e5d9f1;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient(#470491, #280052);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }

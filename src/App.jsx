@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CORE_CONCEPTS } from "./data.js";
 import Header from "./components/Header/Header.jsx";
 import { User } from "./components/User/User.jsx";
@@ -6,9 +7,21 @@ import TabButton from "./components/TabButton/TabButton.jsx";
 import TestCards from "./components/TestCards/TestCards.jsx";
 
 function App() {
+  const [ selectedTopic, setSelectedTopic] = useState("Please select a button");
+
   function handleSelect(selectedTab) {
-    console.log("Tab selected:", selectedTab);
+    // console.log("Tab selected:", selectedTab);
+    // tabContent = selectedTab;
+    setSelectedTopic(selectedTab);
+    // console.log(selectedTopic);
   }
+
+  const [price, setPrice] = useState(1000);
+  const [priceText, setpriceText] = useState("to be paid");
+    function applyDiscount() {
+        setPrice(750);
+        setpriceText("after discount");
+    }
   return (
     <div>
       <Header />
@@ -47,6 +60,9 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
+          <div className="tab-content">
+            {selectedTopic}
+          </div>
         </section>
         <section id="examples">
           <h2>Cards Exercise: Available Experts</h2>
@@ -58,6 +74,12 @@ function App() {
             <p>Maria is a professor of Computer Science at the University of Illinois.</p>
             <p><a href="mailto:blake@example.com">Email Maria</a></p>
           </TestCards>
+        </section>
+        <section id="examples">
+          <div>
+            <p data-testid="price">Total amount {priceText}: ₹{price}/-</p>
+            <button className="button" onClick={applyDiscount}>Apply Discount</button>
+          </div>
         </section>
       </main>
     </div>

@@ -8,7 +8,7 @@ import TestCards from "./components/TestCards/TestCards.jsx";
 import { EXAMPLES } from "./data.js";
 
 function App() {
-  const [ selectedTopic, setSelectedTopic] = useState("components");
+  const [ selectedTopic, setSelectedTopic] = useState();
 
   function handleSelect(selectedTab) {
     // console.log("Tab selected:", selectedTab);
@@ -62,11 +62,17 @@ function App() {
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
           <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
+            { !selectedTopic ? (
+              <h3>Please select a topic</h3>
+              ) : (
+              <div>
+                <h3>{EXAMPLES[selectedTopic].title}</h3>
+                <p>{EXAMPLES[selectedTopic].description}</p>
+                <pre>
+                  <code>{EXAMPLES[selectedTopic].code}</code>
+                </pre> 
+              </div>
+              ) }
           </div>
         </section>
         <section id="examples">

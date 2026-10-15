@@ -23,6 +23,8 @@ function App() {
         setPrice(750);
         setpriceText("after discount");
     }
+
+	const [showAlert, setShowAlert] = useState(false);
   return (
     <div>
       <Header />
@@ -87,9 +89,23 @@ function App() {
           </TestCards>
         </section>
         <section id="examples">
+          <h2>Discount Exercise:</h2>
           <div>
             <p data-testid="price">Total amount {priceText}: ₹{price}/-</p>
             <button className="button" onClick={applyDiscount}>Apply Discount</button>
+          </div>
+        </section>
+        <section id="examples">
+          <h2>Warning ALert Exercise:</h2>
+          <div>
+            {showAlert && (
+                <div data-testid="alert" id="alert">
+                  <h2>Are you sure?</h2>
+                  <p>These changes can't be reverted!</p>
+                  <button onClick={() => setShowAlert(false)}>Proceed</button>
+                </div>
+            )}
+            <button onClick={() => setShowAlert(true)}>Delete</button>
           </div>
         </section>
       </main>

@@ -5,9 +5,10 @@ import { User } from "./components/User/User.jsx";
 import { CardsComponent } from "./components/CardComponent/CardsComponent.jsx";
 import TabButton from "./components/TabButton/TabButton.jsx";
 import TestCards from "./components/TestCards/TestCards.jsx";
+import { EXAMPLES } from "./data.js";
 
 function App() {
-  const [ selectedTopic, setSelectedTopic] = useState("Please select a button");
+  const [ selectedTopic, setSelectedTopic] = useState("components");
 
   function handleSelect(selectedTab) {
     // console.log("Tab selected:", selectedTab);
@@ -60,8 +61,12 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          <div className="tab-content">
-            {selectedTopic}
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
           </div>
         </section>
         <section id="examples">

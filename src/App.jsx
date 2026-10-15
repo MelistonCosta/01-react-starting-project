@@ -29,6 +29,11 @@ function App() {
               description= {CORE_CONCEPTS[2].description}
               image= {CORE_CONCEPTS[2].image}
             />
+            <CardsComponent
+              title = {CORE_CONCEPTS[3].title}
+              description= {CORE_CONCEPTS[3].description}
+              image= {CORE_CONCEPTS[3].image}
+            />
           </ul>
         </section>
         <section id="examples">

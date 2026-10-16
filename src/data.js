@@ -5,45 +5,53 @@ import stateImg from './assets/state-mgmt.png';
 
 export const CORE_CONCEPTS = [
   {
+    id: "item-1",
     image: componentsImg,
     title: 'Components',
     description:
       'The core UI building block - compose the user interface by combining multiple components.',
   },
   {
+    id: "item-2",
     image: jsxImg,
     title: 'JSX',
     description:
       'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
   },
   {
+    id: "item-3",
     image: propsImg,
     title: 'Props',
     description:
       'Make components configurable (and therefore reusable) by passing input data to them.',
   },
   {
+    id: "item-4",
     image: stateImg,
     title: 'State',
     description:
       'React-managed data which, when changed, causes the component to re-render & the UI to update.',
   },
   {
+    id: "item-5",
     image: "https://picsum.photos/200",
     title: 'Web Development',
     description: 'Build responsive and user-friendly websites using modern web technologies.',
   },
   {
+    id: "item-6",
     image: "https://picsum.photos/200",
     title: 'App Development',
     description: 'Create powerful mobile applications that make everyday tasks easier.',
   },
   {
+    id: "item-7",
     image: "https://picsum.photos/200",
     title: 'Artificial Intelligence',
     description: 'Use intelligent systems to automate tasks and solve complex problems.',
   },
   {
+    id: "item-8",
     image: "https://picsum.photos/200",
     title: 'Cloud Computing',
     description: 'Store data and run applications securely from anywhere in the world.',

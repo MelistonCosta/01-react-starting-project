@@ -58,10 +58,10 @@ function App() {
         <section id="examples">
           <h2>Tab Buttons</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect("components")}>Components</TabButton>
-            <TabButton onSelect={() => handleSelect("jsx")}>JSX</TabButton>
-            <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
-            <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
+            <TabButton isSelected={selectedTopic === "components"} onSelect={() => handleSelect("components")}>Components</TabButton>
+            <TabButton isSelected={selectedTopic === "jsx"} onSelect={() => handleSelect("jsx")}>JSX</TabButton>
+            <TabButton isSelected={selectedTopic === "props"} onSelect={() => handleSelect("props")}>Props</TabButton>
+            <TabButton isSelected={selectedTopic === "state"} onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
           <div id="tab-content">
             { !selectedTopic ? (
@@ -81,11 +81,11 @@ function App() {
           <h2>Cards Exercise: Available Experts</h2>
           <TestCards name="Anthony Blake">
             <p>Blake is a professor of Computer Science at the University of Illinois.</p>
-            <p><a href="mailto:blake@example.com">Email Anthony</a></p>
+            <p><a href="mailto:anthony@example.com">Email Anthony</a></p>
           </TestCards>
           <TestCards name="Maria Miles">
             <p>Maria is a professor of Computer Science at the University of Illinois.</p>
-            <p><a href="mailto:blake@example.com">Email Maria</a></p>
+            <p><a href="mailto:maria@example.com">Email Maria</a></p>
           </TestCards>
         </section>
         <section id="examples">

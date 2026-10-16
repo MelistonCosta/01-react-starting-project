@@ -1,11 +1,11 @@
 import "./AlertPopup.css"
 import { useState } from "react";
 
-export default function(AlertPopup) {
+export default function AlertPopup() {
     const [showAlert, setShowAlert] = useState(false);
     return (
         <section id="examples">
-            <h2>Warning ALert Exercise:</h2>
+            <h2>Warning Alert Exercise:</h2>
             <div>
                 {showAlert && (
                     <div data-testid="alert" id="alert">

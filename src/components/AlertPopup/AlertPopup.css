@@ -1,0 +1,48 @@
+.button.button-red {
+    background: linear-gradient(to bottom, #db0000, #700000);
+}
+.button.button-yellow {
+    background: linear-gradient(to bottom, #dbca00, #705800);
+}
+#alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#alert .inner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    background-color: #ffffffd4;
+    padding: 50px;
+    border: 2px solid #d6c500;
+    border-radius: 6px;
+}
+#alert .inner-content h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    color: #000000;
+    line-height: 1.2;
+}
+#alert .inner-content p {
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+}

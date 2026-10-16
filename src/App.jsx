@@ -6,6 +6,7 @@ import { CardsComponent } from "./components/CardComponent/CardsComponent.jsx";
 import TabButton from "./components/TabButton/TabButton.jsx";
 import TestCards from "./components/TestCards/TestCards.jsx";
 import { EXAMPLES } from "./data.js";
+import AlertPopup from "./components/AlertPopup/AlertPopup.jsx";
 
 function App() {
   const [ selectedTopic, setSelectedTopic] = useState();
@@ -24,7 +25,6 @@ function App() {
         setpriceText("after discount");
     }
 
-	const [showAlert, setShowAlert] = useState(false);
   return (
     <div>
       <Header />
@@ -95,19 +95,7 @@ function App() {
             <button className="button" onClick={applyDiscount}>Apply Discount</button>
           </div>
         </section>
-        <section id="examples">
-          <h2>Warning ALert Exercise:</h2>
-          <div>
-            {showAlert && (
-                <div data-testid="alert" id="alert">
-                  <h2>Are you sure?</h2>
-                  <p>These changes can't be reverted!</p>
-                  <button onClick={() => setShowAlert(false)}>Proceed</button>
-                </div>
-            )}
-            <button onClick={() => setShowAlert(true)}>Delete</button>
-          </div>
-        </section>
+        <AlertPopup />
       </main>
     </div>
   );

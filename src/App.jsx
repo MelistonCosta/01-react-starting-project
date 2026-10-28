@@ -26,7 +26,7 @@ function App() {
     }
 
   return (
-    <div>
+    <>
       <Header />
       <User />
       <main>
@@ -90,7 +90,7 @@ function App() {
         </section>
         <AlertPopup />
       </main>
-    </div>
+    </>
   );
 }
 

@@ -17,7 +17,7 @@ function App() {
         <TabExamples />
         <CardExercise />
         <DiscountExercise />
-        <AlertPopup />
+        <AlertPopup /> 
       </main>
     </>
   );

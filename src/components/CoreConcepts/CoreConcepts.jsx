@@ -1,9 +1,10 @@
 import { CORE_CONCEPTS } from "../../data";
 import { CardsComponent } from "../CardComponent/CardsComponent";
+import Section from "../Section/Section";
 
 export default function CoreConcepts() {
     return (
-        <section id="core-concepts">
+        <Section id="core-concepts" className="image-card-blocks" title="Image card component">
             <ul>
             {CORE_CONCEPTS.map( (conceptItem) => (
                 <CardsComponent key={conceptItem.id} {...conceptItem} />
@@ -19,6 +20,6 @@ export default function CoreConcepts() {
             <CardsComponent {...CORE_CONCEPTS[4]} />
             <CardsComponent {...CORE_CONCEPTS[5]} /> */}
             </ul>
-        </section>
+        </Section>
     );
 }

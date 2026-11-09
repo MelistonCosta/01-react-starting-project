@@ -4,7 +4,7 @@ import Section from "../Section/Section";
 
 export default function CoreConcepts() {
     return (
-        <Section id="core-concepts" className="image-card-blocks" title="Image card component">
+        <Section id="core-concepts" className="image-card-blocks" title="Core Components: Image card component">
             <ul>
                 {CORE_CONCEPTS.map( (conceptItem) => (
                     <CardsComponent key={conceptItem.id} {...conceptItem} />

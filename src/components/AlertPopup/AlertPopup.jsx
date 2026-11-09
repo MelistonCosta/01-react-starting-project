@@ -1,11 +1,11 @@
+import Section from "../Section/Section";
 import "./AlertPopup.css"
 import { useState } from "react";
 
 export default function AlertPopup() {
     const [showAlert, setShowAlert] = useState(false);
     return (
-        <section id="examples">
-            <h2>Warning Alert Exercise:</h2>
+        <Section id="examples" title="Warning Alert Exercise:">
             <div>
                 {showAlert && (
                     <div data-testid="alert" id="alert">
@@ -18,6 +18,6 @@ export default function AlertPopup() {
                 )}
                 <button className="button button-red" onClick={() => setShowAlert(true)}>Delete</button>
             </div>
-        </section>
+        </Section>
     );
 }

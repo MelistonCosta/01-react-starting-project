@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Section from "../Section/Section";
 
 export default function DiscountExercise() {
     const [price, setPrice] = useState(1000);
@@ -8,12 +9,11 @@ export default function DiscountExercise() {
         setpriceText("after discount");
     }
     return (
-        <section id="examples">
-            <h2>Discount Exercise:</h2>
+        <Section id="examples" title="Discount Exercise:">
             <div>
-            <p data-testid="price">Total amount {priceText}: ₹{price}/-</p>
-            <button className="button" onClick={applyDiscount}>Apply Discount</button>
+                <p data-testid="price">Total amount {priceText}: ₹{price}/-</p>
+                <button className="button" onClick={applyDiscount}>Apply Discount</button>
             </div>
-        </section>
+        </Section>
     )
 }

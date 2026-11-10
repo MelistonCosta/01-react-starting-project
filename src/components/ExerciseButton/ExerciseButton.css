@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+section.exercise-btn {
+    color: #e5d9f1;
+    background: linear-gradient(#f3f0f8, #d6d2db);
+    font-family: 'Raleway', sans-serif;
+    margin: 1rem auto;
+    max-width: 30rem;
+}
+
+section.exercise-btn h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #030a1b;
+}
+
+section.exercise-btn .button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #030a1b;
+}
+
+section.exercise-btn .icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section.exercise-btn .button-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+section.exercise-btn .filled-button {
+  background: linear-gradient(#7fa1f7, #6085e4);
+  color: #030a1b;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+section.exercise-btn .filled-button:hover {
+  background: linear-gradient(#89a9fb, #6890f6);
+}
+
+section.exercise-btn .filled-button:disabled {
+  background: #a3a9b7;
+  color: #3a445c;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+section.exercise-btn .outline-button {
+  border: 1px solid #2658d6;
+  color: #2658d6;
+}
+
+section.exercise-btn .outline-button:hover {
+  background: #cbd8fc;
+}
+
+section.exercise-btn .text-button {
+  color: #2658d6;
+}
+
+section.exercise-btn .text-button:hover {
+  background: #cbd8fc;
+}

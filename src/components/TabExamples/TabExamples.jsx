@@ -4,7 +4,7 @@ import { EXAMPLES } from "../../data"
 import Section from "../Section/Section";
 
 export default function TabExamples() {
-    
+      
     const [ selectedTopic, setSelectedTopic] = useState();
 
     function handleSelect(selectedTab) {
